@@ -7,13 +7,21 @@ $(document).ready(function(){
         url: "data.csv",
         dataType: "text"
         // success: function(data) {processData(data);}
-     }).done(function(response){
-      //  console.log(response)
-      for (var i=0; i<$.csv.toObjects(response).length; i++) {
-        $('.kwslist').append("<li>" + ($.csv.toObjects(response)[i].Keyword) + "</li>");
-      }
+        }).done(function(response){
+            // response.sort(function(a, b) {
+            //     return parseFloat(a.Differential) - parseFloat(b.Differential);
+            //     });
+            //     console.log($.csv.toObjects(response))
+          // $(response).sort("Differential", "asc")(function(response){
+            for (var i=0; i<$.csv.toObjects(response).length; i++) {
+              $('.kwslist').append("<li>" + "$" + ($.csv.toObjects(response)[i].CostPerConversion) + " " + ($.csv.toObjects(response)[i].Keyword) + "</li>")
+              }
+           })
+//       response.sort(function(a, b) {
+//   return parseFloat(a.Differential) - parseFloat(b.Differential);
+// });
              //  console.log($.csv.toObjects(response));
-     });
+          // })
 
 
     // console.log(kwsdata);
@@ -40,4 +48,4 @@ $(document).ready(function(){
     //   console.log("this always happens regardless of successful ajax request or not")
     // })
   })
-})
+});
