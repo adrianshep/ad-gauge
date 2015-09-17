@@ -8,15 +8,52 @@ $(document).ready(function(){
         dataType: "text"
         // success: function(data) {processData(data);}
         }).done(function(response){
+            var csvObjects = $.csv.toObjects(response);
+            var objectsCount = csvObjects.length;
+            var csv;
+            var diff;
+            var val;
+            var keyword;
+            var i;
+            var status;
+            for (i = 0; i< objectsCount; i++) {
+              csv = csvObjects[i];
+              diff = csv.Differential;
+              keyword = csv.Keyword;
+              val = parseFloat(diff);
+              // console.log(val);
+
+              if (val > 1.10){
+                status = "high";
+              }else if (val > 0.90){
+                status = "medium";
+              }else{
+                status = "low";
+              }
+
+              $('.kwslist').append("<li class='" + status + "'>" + "" + (diff) + " " + (keyword) + "</li>");
+            }
+          })
             // response.sort(function(a, b) {
             //     return parseFloat(a.Differential) - parseFloat(b.Differential);
             //     });
             //     console.log($.csv.toObjects(response))
           // $(response).sort("Differential", "asc")(function(response){
-            for (var i=0; i<$.csv.toObjects(response).length; i++) {
-              $('.kwslist').append("<li>" + "$" + ($.csv.toObjects(response)[i].CostPerConversion) + " " + ($.csv.toObjects(response)[i].Keyword) + "</li>")
-              }
-           })
+
+          //   for (var i=0; i<$.csv.toObjects(response).length; i++) {
+          //     $('.kwslist').append("<li>" + "" + ($.csv.toObjects(response)[i].Differential) + " " + ($.csv.toObjects(response)[i].Keyword) + "</li>");
+          //       if (parseFloat(($.csv.toObjects(response)[i].Differential)) > 1.10) {
+          //         $("li").addClass("red"); }
+          //         else if (parseFloat(($.csv.toObjects(response)[i].Differential)) > 0.90) {
+          //         $("li").addClass("yellow");
+          //         }
+          //         else {
+          //           $("li").addClass("green");
+          //           }
+          //   }
+          //  })
+
+           // console.log(($.csv.toObjects(response)[i].Differential));
 //       response.sort(function(a, b) {
 //   return parseFloat(a.Differential) - parseFloat(b.Differential);
 // });
