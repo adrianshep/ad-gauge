@@ -18,9 +18,9 @@ $(document).ready(function(){
             var campaign;
             var dates;
             var targetcost;
-            $('.campaign').html(csvObjects[0].Campaign + " campaign");
-            // $('.dates').html(csvObjects[0].DateRange);
-            $('.targetcost').html("($" + csvObjects[0].ThresholdCostPerConversion + " target cost per conversion)");
+            $('.campaign').html(csvObjects[0].Campaign + " (campaign)");
+            $('.dates').html(csvObjects[0].DateRange + " (date range)");
+            $('.targetcost').html("$" + csvObjects[0].ThresholdCostPerConversion + " (target cost per conversion)");
             // for (i = 0; i < 2; i++) {
             //   campaign = csv.Campaign;
             //   dates = csv.DateRange;
@@ -38,11 +38,11 @@ $(document).ready(function(){
               console.log(costperconv);
 
               if (val > 1.10){
-                status = "low";
+                status = "high";
               }else if (val > 0.90){
                 status = "medium";
               }else{
-                status = "high";
+                status = "low";
               }
 
               $('.kwslist').append("<li class='" + status + "'>" + "$" + (costperconv) + " " + (keyword) + "</li>");
