@@ -1,7 +1,6 @@
 $(document).ready(function(){
   // just adding a click event to the only element we have on the page.
-  $("h1").on("click", function(){
-    // var kwsdata = $.csv.toObjects('data.csv');
+  $("button").on("click", function(){
     $.ajax({
         type: "GET",
         url: "data.csv",
@@ -16,24 +15,42 @@ $(document).ready(function(){
             var keyword;
             var i;
             var status;
+            var campaign;
+            var dates;
+            var targetcost;
+            $('.campaign').html(csvObjects[0].Campaign + " campaign");
+            // $('.dates').html(csvObjects[0].DateRange);
+            $('.targetcost').html("($" + csvObjects[0].ThresholdCostPerConversion + " target cost per conversion)");
+            // for (i = 0; i < 2; i++) {
+            //   campaign = csv.Campaign;
+            //   dates = csv.DateRange;
+            //   targetcost = csv.ThresholdCostPerConversion;
+            //   $('.campaignspecs').append("<li">(campaign) + "(campaign)""</li>");
+            //   $('.campaignspecs').append("<li">(dates) + "(date range)""</li>");
+            //   $('.campaignspecs').append("<li">"$" + (targetcost) + "(target cost per conversion)""</li>");
+            // }
             for (i = 0; i< objectsCount; i++) {
               csv = csvObjects[i];
               diff = csv.Differential;
               keyword = csv.Keyword;
               val = parseFloat(diff);
-              // console.log(val);
+              costperconv = csv.CostPerConversion;
+              console.log(costperconv);
 
               if (val > 1.10){
-                status = "high";
+                status = "low";
               }else if (val > 0.90){
                 status = "medium";
               }else{
-                status = "low";
+                status = "high";
               }
 
-              $('.kwslist').append("<li class='" + status + "'>" + "" + (diff) + " " + (keyword) + "</li>");
+              $('.kwslist').append("<li class='" + status + "'>" + "$" + (costperconv) + " " + (keyword) + "</li>");
             }
           })
+        })
+      });
+
             // response.sort(function(a, b) {
             //     return parseFloat(a.Differential) - parseFloat(b.Differential);
             //     });
@@ -84,5 +101,3 @@ $(document).ready(function(){
     // }).always(function(){
     //   console.log("this always happens regardless of successful ajax request or not")
     // })
-  })
-});

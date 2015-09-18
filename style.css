@@ -1,10 +1,12 @@
-h1 {
-    color: white;
-}
-
 body {
   background-color: DarkSlateGray;
   font-family: "Geneva";
+  color: white;
+  list-style-type: none;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 }
 
 ul {
@@ -14,6 +16,10 @@ ul {
     /*color: #83F52C;*/
     /*color: yellow;*/
     /*color: #FE0001;*/
+}
+
+.targetcost {
+  line-height: 1.5;
 }
 
 .low {

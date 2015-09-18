@@ -1,11 +1,11 @@
-Date Range,Campaign,Campaign ID,Keyword,Cost,Impressions,Clicks,Conversions,CostPerConversion,ThresholdCostPerConversion,Differential
-20150909 20150915,Acme,001,anvil,14.92,1211,19,2,7.46,5.40,0.72
-20150909 20150915,Acme,001,birdseed,28.76,1806,32,5,5.75,5.40,0.94
-20150909 20150915,Acme,001,bomb,98.13,5401,107,18,5.45,5.40,0.99
-20150909 20150915,Acme,001,detonator,22.44,3105,64,10,2.24,5.40,2.41
-20150909 20150915,Acme,001,nitroglycerin,48.15,6797,126,29,1.66,5.40,3.25
-20150909 20150915,Acme,001,dehydrated boulders,2.91,152,12,3,0.97,5.40,5.57
-20150909 20150915,Acme,001,hi-speed tonic,7.37,138,33,2,4.97,5.40,1.09
-20150909 20150915,Acme,001,jet-propelled pogo stick,0.86,23,2,1,0.86,5.40,6.28
-20150909 20150915,Acme,001,rocket sled,62.11,3235,46,4,15.53,5.40,0.35
-20150909 20150915,Acme,001,fortified leg muscle vitamins,212.74,15350,167,3,22.52,5.40,0.24
+DateRange,Campaign,Campaign ID,Keyword,Cost,Impressions,Clicks,Conversions,CostPerConversion,ThresholdCostPerConversion,Differential
+20150909 20150915,Acme Corporation,001,anvil,14.92,1211,19,2,7.46,5.40,1.38
+20150909 20150915,Acme Corporation,001,birdseed,28.76,1806,32,5,5.75,5.40,1.06
+20150909 20150915,Acme Corporation,001,bomb,98.13,5401,107,18,5.45,5.40,1.01
+20150909 20150915,Acme Corporation,001,detonator,22.44,3105,64,10,2.24,5.40,0.41
+20150909 20150915,Acme Corporation,001,nitroglycerin,48.15,6797,126,29,1.66,5.40,0.31
+20150909 20150915,Acme Corporation,001,dehydrated boulders,2.91,152,12,3,0.97,5.40,0.18
+20150909 20150915,Acme Corporation,001,hi-speed tonic,7.37,138,33,2,4.97,5.40,0.92
+20150909 20150915,Acme Corporation,001,jet-propelled pogo stick,0.86,23,2,1,0.86,5.40,0.16
+20150909 20150915,Acme Corporation,001,rocket sled,62.11,3235,46,4,8.14,5.40,1.51
+20150909 20150915,Acme Corporation,001,fortified leg muscle vitamins,212.74,15350,167,3,9.88,5.40,1.83
