@@ -4,7 +4,7 @@ $(document).ready(function(){
     // var kwsdata = $.csv.toObjects('data.csv');
     $.ajax({
         type: "GET",
-        url: "http://adrianshep.github.io/ad-gauge/data.csv",
+        url: "http://crossorigin.me/http://adrianshep.github.io/ad-gauge/data.csv",
         dataType: "text"
         // success: function(data) {processData(data);}
         }).done(function(response){
