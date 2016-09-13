@@ -1,0 +1,32 @@
+body {
+  background-color: #222;
+  font-family: "Geneva";
+  color: white;
+  list-style-type: none;
+  display:flex;
+  flex-direction:column;
+  justify-content:left;
+  align-items:center;
+}
+
+ul {
+    list-style-type: none;
+    /*padding:0; margin:0;*/
+    /*flex-grow: 1;*/
+    /*color: white;*/
+    /*color: #83F52C;*/
+    /*color: yellow;*/
+    /*color: #FE0001;*/
+}
+
+.low {
+  color: #83F52C;
+}
+
+.medium {
+  color: yellow;
+}
+
+.high {
+  color: #FE0001;
+}
