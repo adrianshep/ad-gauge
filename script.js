@@ -4,7 +4,7 @@ $(document).ready(function(){
     // var kwsdata = $.csv.toObjects('data.csv');
     $.ajax({
         type: "GET",
-        url: "http://crossorigin.me/http://codepen.io/adrianshep/pen/jrWvjq.html",
+        url: "http://codepen.io/adrianshep/pen/jrWvjq.html",
         dataType: "text"
         // success: function(data) {processData(data);}
         }).done(function(response){
